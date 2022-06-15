@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/post.css"/>
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+
+{# Grab other posts that aren’t this one for the 'more from the blog' feed #}
+{% set recommendedPosts = helper.getSiblingContent(collections.blog, page) %}
+{# Render post date and any tags that this post has been filed under #}
+{% set pageHeaderSummary %}
+  <span class="posted-on">Updated on: <time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time></span>
+  {% if tags %}
+    <!-- <p class="visually-hidden" id="tags-desc">Tags that this post has been filed under.</p> -->
+    <ul class="tags-list" aria-describedby="tags-desc">
+      {% for tag in tags %}
+        <li class="d-flex">
+        <a class="chip" href="/tag/{{ tag | slug }}/">#{{ tag | title | replace(' ', '') }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endset %}
+
+{% block content %}
+  <div>
+    {% include "partials/page-header.html" %}
+    
+    <div class="container">
+      <div class="col prose" >
+        {{ content | safe }}
+      </div>
+    <br>
+    </div>
+  </div>
+  {% if recommendedPosts %}
+  <footer class="container">
+    {% set postListItems = recommendedPosts %}
+    {% set postListHeadline = 'Recommended Stories:' %}
+    <div class="col">
+      {% include "partials/post-list.html" %}
+    </div>
+
+  </footer>
+{% endif %}
+  {% include "partials/cta.html" %}
+{% endblock %}
+

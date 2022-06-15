@@ -1,0 +1,43 @@
+{
+  "name": "suraj-kumar",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "sass:process": "sass  --watch  src/scss/:src/_includes/assets/css/ --style=compressed",
+    "start": "concurrently \"npm run sass:process -- --watch\" \"npm run serve\"",
+    "serve": "npx eleventy --serve",
+    "build": "npx @11ty/eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "@11ty/eleventy-plugin-rss": "^1.1.2",
+    "@gerhobbelt/markdown-it-footnote": "^3.0.3-12",
+    "moment": "^2.29.3",
+    "sass": "^1.52.3"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "autoprefixer": "^10.4.7",
+    "concurrently": "^7.2.1",
+    "i": "^0.3.7",
+    "markdown-it-abbr": "^1.0.4",
+    "markdown-it-attrs": "^4.1.4",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-deflist": "^2.1.0",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-footnote": "^3.0.3",
+    "markdown-it-html5-media": "^0.7.1",
+    "markdown-it-ins": "^3.0.1",
+    "markdown-it-mark": "^3.0.1",
+    "markdown-it-multimd-table": "^4.1.3",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0",
+    "npm": "^8.12.1",
+    "postcss-cli": "^9.1.0"
+  }
+}

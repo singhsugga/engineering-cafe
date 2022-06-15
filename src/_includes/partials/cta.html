@@ -1,0 +1,34 @@
+{% set ctaPrefix = cta %}
+
+{% if ctaContent %} 
+  {% set ctaPrefix = ctaContent %}
+{% endif %}
+
+<!-- <article class="[ cta ] [ dot-shadow panel ] [ bg-dark-shade color-light ]">
+  <div class="wrapper">
+    <div class="[ cta__inner ] [ flow ]">
+      <h2 class="[ cta__heading ] [ headline ]" data-highlight="quaternary">{{ ctaPrefix.title }}</h2>
+      <p class="[ cta__summary ] [ measure-short ]">{{ ctaPrefix.summary }}</p>
+      <div class="cta__action">
+        <a class="button" data-variant="ghost" href="{{ ctaPrefix.buttonUrl }}">{{ ctaPrefix.buttonText }}</a>
+      </div>
+    </div>
+  </div>
+</article> -->
+<link rel="stylesheet" href="/cta.css" />
+<div class="container-fluid cta" >
+    <div class="container">
+      <br>
+      <h3>Stay Connected</h3>
+      <div class="d-flex justify-content-center mt-3">
+        <img class="logo-social" src="/images/icons/linkedin.svg"/>
+        <img class="logo-social" src="/images/icons/twitter.svg"/>
+        <img class="logo-social" src="/images/icons/github.svg"/>
+        <img class="logo-social" src="/images/icons/stackoverflow.svg"/>
+
+
+      </div>
+      <br>
+     
+    </div>
+</div>

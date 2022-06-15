@@ -1,0 +1,15 @@
+.cta{
+    width: 100%;
+    margin-top:20px;
+    background-color: #f8f8fa;
+    & h3{
+        text-align: center;
+       // padding: 1rem;
+      //  margin-top: 40px;
+    }
+    & .logo-social{
+          height:32px;
+          width:32px;
+          margin :10px;
+    }
+}

@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/pagination.css" />
+{# Only renders this section if there are links to render #}
+{% if pagination.href.next or pagination.href.previous %}
+  <footer class="">
+    <div class="wrapper">
+      <nav class="d-flex justify-content-center" aria-label="Pagination links">
+        {% if pagination.href.previous %}
+          <a class="page" href="{{ pagination.href.previous }}{{ paginationAnchor }}" data-direction="backwards">
+            <span >{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
+          </a>
+        {% endif %}
+        <span class=" flex-grow-1"></span>
+        {% if pagination.href.next %}
+          <a class="page" href="{{ pagination.href.next }}{{ paginationAnchor }}" data-direction="forwards">
+            <span >{{ paginationNextText if paginationNextText else 'Next' }}</span>
+          </a>
+        {% endif %}
+      </nav>
+    </div>
+  </footer>
+{% endif %}

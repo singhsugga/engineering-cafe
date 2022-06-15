@@ -1,0 +1,46 @@
+<!-- <div class="[ dot-shadow panel ] [ bg-secondary-glare ]" id="post-list">
+    <div class="[ wrapper ] [ flow flow-space-700 ]">
+      {% if postListHeadline %}
+      <h2 class="[ headline ] [ measure-micro ]" data-highlight="primary">
+        {{ postListHeadline }}
+      </h2>
+      {% endif %}
+      <div>
+        <ol class="[ post-list ] [ flow ]">
+          {% for item in postListItems %}
+          <li class="[ post-list__item ] [ leading-tight measure-long ]">
+            <a href="{{ item.url }}" class="post-list__link">{{ item.data.title }}</a>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+  </div> -->
+  <link rel="stylesheet" href="/post-card.css" />
+  
+  {% if postListHeadline %}
+  <div class="container">
+    <h2 class="headline" data-highlight="primary">
+      {{ postListHeadline }}
+    </h2>
+  </div>
+
+  {% endif %}
+  {% for item in postListItems %}
+
+<div class="container post-card ">
+    <div class="row">
+        <div class="col-lg-4 col-sm-12">
+            <img class="image" src="{{item.data.cover}}"/>
+        </div>
+        <div class="col-lg-8 col-sm-12">
+            <!-- <h3>{{ item.data.title }}</h3> -->
+            <a href="{{ item.url }}" ><h3>{{ item.data.title }}</h3></a>
+            <br>
+            <p class="summary">{{ item.data.summary}}</p>
+            <!-- <br> -->
+            <a href="{{ item.url }}" class="read-more font-s">Read more</a>
+        </div>
+    </div>
+</div>
+{% endfor %}
