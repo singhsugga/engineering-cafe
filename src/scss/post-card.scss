@@ -7,6 +7,7 @@
     clear: both;
     transition: box-shadow .3s;
     background-color: #fff;
+
     &:hover {
         box-shadow: 0 0 11px rgba(33, 33, 33, .2);
     }
@@ -41,6 +42,7 @@
     cursor: pointer;
     transition: box-shadow .3s;
     font-family: 'Poppins', sans-serif;
+
     &:hover {
         background-color: #1e5dd3;
         color: #fff;
@@ -48,16 +50,28 @@
     }
 
 }
-@media only screen and (max-width: 600px) {
-    .read-more{
+
+.title {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 991px) {
+    .read-more {
         border: 1px solid #1e5dd3;
         font-size: 0.8rem;
         padding: .5rem;
-         font-family: 'Poppins', sans-serif;
+        font-family: 'Poppins', sans-serif;
         margin-top: 1rem;
     }
+
+    .title {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
 }
-.headline{
-    margin-top:10px;
+
+.headline {
+    margin-top: 10px;
     margin-bottom: 10px;
 }

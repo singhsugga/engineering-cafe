@@ -27,7 +27,7 @@ const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownItEmoji = require("markdown-it-emoji");
-
+const htmlmin = require('html-minifier')
 module.exports = (config) => {
   config.addPlugin(syntaxHighlight);
 
@@ -102,6 +102,22 @@ module.exports = (config) => {
       config.addPassthroughCopy({
                 'src/_includes/assets/css/': './'
               });
+              config.addTransform('htmlmin', function (content, outputPath) {
+                if (
+                  process.env.ELEVENTY_ENV === 'production' &&
+                  outputPath &&
+                  outputPath.endsWith('.html')
+                ) {
+                  let minified = htmlmin.minify(content, {
+                    useShortDoctype: true,
+                    removeComments: true,
+                    collapseWhitespace: true,
+                  })
+                  return minified
+                }
+            
+                return content
+              })
     return {
         markdownTemplateEngine: 'njk',
         dataTemplateEngine: 'njk',

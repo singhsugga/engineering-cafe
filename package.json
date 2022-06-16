@@ -7,7 +7,7 @@
     "sass:process": "sass  --watch  src/scss/:src/_includes/assets/css/ --style=compressed",
     "start": "concurrently \"npm run sass:process -- --watch\" \"npm run serve\"",
     "serve": "npx eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "build": " npx @11ty/eleventy ELEVENTY_ENV=production eleventy"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +24,7 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "autoprefixer": "^10.4.7",
     "concurrently": "^7.2.1",
+    "html-minifier": "^4.0.0",
     "i": "^0.3.7",
     "markdown-it-abbr": "^1.0.4",
     "markdown-it-attrs": "^4.1.4",
