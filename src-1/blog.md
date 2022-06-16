@@ -1,5 +1,5 @@
 ---
-title: 'The Issue 33 Blog'
+title: 'Stories @ Engineering Cafe'
 layout: 'layouts/feed.html'
 pagination:
   data: collections.blog

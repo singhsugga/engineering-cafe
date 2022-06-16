@@ -1,6 +1,6 @@
 ---
-title: 'Issue 33'
-metaDesc: 'A made up agency site that you build if you take Learn Eleventy From Scratch, by Piccalilli'
+title: 'Suraj's Engineering cafe'
+metaDesc: 'A place where i write about engineering stuffs.'
 layout: 'layouts/home.html'
 intro:
   eyebrow: 'Digital Marketing is our'
