@@ -25,6 +25,9 @@
     .mnu{
       cursor: pointer;
     }
+    .popupvisible{
+      display: block;
+  }
   }
   @media only screen and (max-width: 600px) {
     nav {

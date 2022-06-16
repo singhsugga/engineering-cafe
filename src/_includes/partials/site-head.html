@@ -23,7 +23,7 @@
     <span @click="open = true" class="mnu">{% include "partials/menu.svg" %}</span>
 
   </nav>
-  <div class="overlay right black" x-show="open">
+  <div style="display:none" class="overlay right black" x-show="open" :class="{ 'popupvisible': open }">
   <div class="dialog" @click.away="open = false" x-transition.duration.500ms>
   {% include "partials/side-menu.html" %}
   </div>
