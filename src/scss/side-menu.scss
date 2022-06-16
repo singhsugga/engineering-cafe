@@ -1,0 +1,20 @@
+.side-cont{
+width: 400px;
+height:100vh;
+background-color:#f8fbff;
+border-top-left-radius:10px;
+border-bottom-left-radius:10px;
+border-left: solid 5px #1e5dd3;
+ .profile{
+    border-radius: 50%;
+ border: solid 5px #1e5dd3;
+ width:60%;
+ margin-top: 60px;
+}
+}
+@media only screen and (max-width: 400px) {
+   .side-cont{
+    width:300px;
+   }
+  }
+  

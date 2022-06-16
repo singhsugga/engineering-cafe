@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %} 
 
 {% block content %}
-<div class="wrapper">
+<!-- <div class="wrapper">
   <article class="intro">
     <div class="[ intro__header ] [ radius frame ]">
       <h1 class="[ intro__heading ] [ weight-normal text-400 md:text-600 ]">
@@ -21,15 +21,19 @@
       />
     </div>
   </article>
+</div> -->
+<div class="mt-4 container ">
+  <div class="col">
+    <br><br>
+    <h1 class="mx-auto" style="text-align:center;margin-top: 50px;">Hi,Welcome to engineering cafe</h1>
+    <p class="sub"> My name is Suraj, A Engineer by profession, currently working as Staff Software Enginner at VComply</p>
+    <h2 style="text-align: center;margin-top: 20px;"><a class="explore mx-auto" href="/blog">Explore Stories</a></h2>
+  </div>
+  </div>
+
+<div class="cta-holder">
+  {% include "partials/cta.html" %} 
 </div>
 
-{% set ctaContent = primaryCTA %} 
-{% include "partials/cta.html" %} 
-
-{% include "partials/featured-work.html" %} 
-{% include "partials/studio-feed.html" %} 
-
-{% set ctaContent = cta %} 
-{% include "partials/cta.html" %} 
 
 {% endblock %}

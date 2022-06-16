@@ -17,11 +17,16 @@
     </div>
   </div>
 </header> -->
-<div class="container">
+<div class="container" x-data="{open:false}">
   <nav class="nav col sm-p-4">
-    <span class="logo">SURAJ'S ENGINNERING CAFE</span>
-    {% include "partials/menu.svg" %}
+  <a href="/">  <span class="logo"> SURAJ'S ENGINNERING CAFE</span></a>
+    <span @click="open = true" class="mnu">{% include "partials/menu.svg" %}</span>
 
   </nav>
+  <div class="overlay right black" x-show="open">
+  <div class="dialog" @click.away="open = false" x-transition.duration.500ms>
+  {% include "partials/side-menu.html" %}
+  </div>
+</div>
     
 </div>

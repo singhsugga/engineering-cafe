@@ -100,6 +100,9 @@ module.exports = (config) => {
       });
       config.addPassthroughCopy({'./src/assets/':'./'});
       config.addPassthroughCopy({
+        './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
+      })
+      config.addPassthroughCopy({
                 'src/_includes/assets/css/': './'
               });
               config.addTransform('htmlmin', function (content, outputPath) {
