@@ -7,7 +7,7 @@
     "sass:process": "sass  --watch  src/scss/:src/_includes/assets/css/ --style=compressed",
     "start": "concurrently \"npm run sass:process -- --watch\" \"npm run serve\"",
     "serve": "npx eleventy --serve",
-    "build": " npx @11ty/eleventy ELEVENTY_ENV=production eleventy"
+    "build": "npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
